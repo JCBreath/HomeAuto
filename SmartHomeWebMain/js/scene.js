@@ -4,22 +4,22 @@ function init() {
 
 }
 
-function reset() {
-	var contents = document.getElementsByClassName("content");
-	for(let i = 0; i < contents.length; i++) {
-		contents[i].style.height = "100%";
-		contents[i].style.border = "0px solid #ebeffe";
-		contents[i].style.background = "#57968e";
-	}
-}
-
 function select(index) {
-	reset();
+	reset_blocks();
 	var content = document.getElementById("content-"+index);
 	content.style.height = "98%";
 	content.style.border = "2px solid #ebeffe";
 	content.style.background = "#5b5f9e";
 	selected = index;
+}
+
+function reset_blocks() {
+	var contents = document.getElementsByClassName("content");
+	for(var i = 0; i < contents.length; i++) {
+		contents[i].style.height = "100%";
+		contents[i].style.border = "0px solid #ebeffe";
+		contents[i].style.background = "#57968e";
+	}
 }
 
 function mouseover(index) {

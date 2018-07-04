@@ -1,0 +1,108 @@
+<!doctype HTML>
+<html>
+	<head>
+		<title>Smart Home Center - JCBreath</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" type="text/css" href="http://web.cs.ucdavis.edu/~amenta/s18/reset.css">
+		<link rel="stylesheet" type="text/css" href="./css/device.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+	</head>
+
+	<body>
+		<header>
+			<div id="header-upper">
+				<a id="user-name">用户</a>
+				<img id="user-avatar" src="./img/avatar.png" style="height: 50px; width: 50px;">
+			</div>
+			<div id="header-lower">
+				<div id="time-date">
+					<div id="time">
+						<a>12:34</a>
+					</div>
+					<div id="date">
+						<a>2018年1月10日</a>
+					</div>
+				</div>
+				<div id="navibar">
+					<a class="navi-element" id="navi-mainpage" href="./index.html">主页</a>
+					<a class="navi-element" id="navi-scene" href="./scene.html">场景</a>
+					<a class="navi-element" id="navi-device" href="./device.html">设备</a>
+					<a class="navi-element" id="navi-status" href="./status.html">状态</a>
+					<a class="navi-element" id="navi-monitor" href="./monitor.html">监控</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div id="left">
+				<div class="left-block"><div class="left-content" id="left-top" onclick="sel_floor(1);">
+					<img class="block-icon" src="./img/power.png">
+					<a class="block-description">1层</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-mid">
+					<img class="block-icon" src="./img/user.png">
+					<a class="block-description">2层</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">3层</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">4层</a>
+				</div></div>
+			</div>
+			<div id="first-floor">
+				<div class="left-block"><div class="left-content" id="left-bot" onclick="show_floor();">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">返回</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot" onclick="sel_room(1)">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">客厅</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">厨房</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">卫生间</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">卫生间</a>
+				</div></div>
+				<div class="left-block"><div class="left-content" id="left-bot">
+					<img class="block-icon" src="./img/settings.png">
+					<a class="block-description">卫生间</a>
+				</div></div>
+			</div>
+			<div id="right">
+				<div class="right-block"><div id="right-content">
+					<div id="right-heading">
+						<img class="right-block-icon" src="./img/light-bulb.png">
+						<div id="right-content-text">灯光</div>
+					</div>
+					<div id="right-heading">
+						<img class="right-block-icon" src="./img/air-conditioner.png">
+						<div id="right-content-text">空调</div>
+					</div>
+					<div id="right-heading">
+						<img class="right-block-icon" src="./img/curtains.png">
+						<div id="right-content-text">窗帘</div>
+					</div>
+					<div id="right-heading">
+						<img class="right-block-icon" src="./img/shield.png">
+						<div id="right-content-text">安防</div>
+					</div>
+					<div id="right-items">暂无</div>
+				</div></div>
+			</div>
+		</main>
+	
+		<!-- The Javascript for this page -->
+		<script src="./js/device.js"></script>
+
+	</body>
+</html>
