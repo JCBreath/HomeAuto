@@ -144,13 +144,20 @@ main {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	margin-top: 10px;
     padding-left: 20px;
     height: 40px;
-    margin-bottom: 10px;
 }
 
 #right-items {
 	padding: 0 20px 0 20px;
+}
+
+.control {
+	display: block;
+	flex-direction: row;
+	padding: 10px 10px 10px 10px;
+	margin-left: 20px;
 }
 
 .left-block {
@@ -211,4 +218,52 @@ main {
 	overflow-x: hidden;	
 	width: 25%;
 	height: 100%;
+}
+
+.control-description {
+	display: inline-block;
+
+}
+
+.wrapper{
+	display: inline-block;
+    position: relative;
+    width:200px;
+    height:20px;
+    border:0px solid darkgray;
+}
+
+.slider{
+    position: absolute;
+    left:0;
+    width:20px;
+    height:20px;
+    border-radius: 15px;
+    display: inline-block;
+    background: #ffffff;
+    cursor:pointer;
+}
+
+.fill{
+    display: inline-block;
+    width:0;
+    height:5px;
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.fill-blank {
+	display: inline-block;
+    width: 0px;
+    height:5px;
+    background: #004044;
+    left: 0px;
+    border-radius: 15px;
+    margin: 0;
+    margin-left: -5px;
+}
+
+div {
+	vertical-align: middle;
 }
