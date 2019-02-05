@@ -40,11 +40,11 @@
 	position: relative;
 	width: 100%;
 	max-width: 400px;
-	border: solid 1px #dedede;
+	border: solid 1px #efefef;
 	animation: fadeEffect .3s;
 	color: #454545;
 	background-color: #ffffff;
-	margin: 40px auto 0px auto;
+	margin: 20px auto 0px auto;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 	transition: .5s;
 	-webkit-transition: .5s;
@@ -56,11 +56,11 @@
 	position: relative;
 	width: 100%;
 	max-width: 400px;
-	border: solid 1px #dedede;
+	border: solid 1px #efefef;
 	animation: fadeEffect .3s;
 	color: #454545;
 	background-color: #ffffff;
-	margin: 40px auto 0px auto;
+	margin: 20px auto 0px auto;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 	height: 200px;
 	transition: .5s;
@@ -73,51 +73,40 @@
 */
 
 .light-slider {
-	position: absolute;
-	left: 45px;
-	top: 95px;
+	position: relative;
+	margin: 0px auto 0px auto;
+	top: 75px;
     -webkit-appearance: none;
     width: 300px;
-    height: 5px;
-    border-radius: 5px;
-    background: #aaaaaa;
+    height: 30px;
+    background: #dedede;
     outline: none;
-    opacity: 0.9;
     -webkit-transition: .5s;
-    transition: opacity .5s;
-    border: solid 1px grey;
+    transition: .5s;
+    border: solid 1px #dedede;
+    border-radius: 2px;
+    color: transparent;
 }
 
 .light-slider:hover {
-    opacity: 1;
+	border: solid 1px #63aae7;
+	color: #438ac7;
 }
 
-.light-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    border-radius: 15px;
-    border: solid 1px grey;
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    cursor: pointer;
+
+.light-slider-bar {
+	width: 0px;
+  	height: 30px;
+  	background-color: #ffffff;
 }
 
-.light-slider::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
-    background: #ffffff;
-    border: solid 1px grey;
-    background: #ffffff;
-    cursor: pointer;
-}
-
-input[type=range]:focus::-ms-fill-lower {
-  background: #888;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #ccc;
+#brt-perc {
+	position: absolute;
+	top: 0px;
+	width: 300px;
+	font-size: 20px;
+	font-weight: lighter;
+	text-align: center;
 }
 
 .ac-blk {
@@ -125,45 +114,61 @@ input[type=range]:focus::-ms-fill-upper {
 	position: relative;
 	width: 100%;
 	max-width: 400px;
-	border: solid 1px #dedede;
+	border: solid 1px #efefef;
 	animation: fadeEffect .3s;
 	color: #454545;
 	background-color: #ffffff;
-	margin: 40px auto 0px auto;
+	margin: 20px auto 0px auto;
 	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 	height: 200px;
 	transition: .5s;
 	-webkit-transition: .5s;
 }
 
-#temp-up-btn {
+#temp-part {
 	position: absolute;
-	top: 50px;
-	right: 20px;
-	width: 45px;
-	height: 45px;
-	font-size: 40px;
+	width: 80px;
+	right: 30px;
+	top: 65px;
+	border: solid 1px #efefef;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+#temp-up-btn {
+	display: block;
+	font-size: 30px;
 	text-align: center;
 	cursor: pointer;
+	background: #438ac7;
+	color: #fff;
+	transition: .5s;
+}
+
+#temp-up-btn:hover {
+	background: #63aae7;
 }
 
 #temp-down-btn {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	width: 45px;
-	height: 45px;
-	font-size: 40px;
+	display: block;
+	font-size: 30px;
 	text-align: center;
 	cursor: pointer;
+	background: #438ac7;
+	color: #fff;
+	transition: .5s;
+}
+
+#temp-down-btn:hover {
+	background: #63aae7;
 }
 
 #temp-value {
-	position: absolute;
-	right: 20px;
-	top: 85px;
+	display: block;
 	font-size: 40px;
 	text-align: center;
+	color: #438ac7;
+	font-weight: lighter;
 }
 
 #fan-up-btn {
@@ -196,20 +201,62 @@ input[type=range]:focus::-ms-fill-upper {
 	text-align: center;
 }
 
+#fan-part {
+	position: absolute;
+	width: 212px;
+	border: solid 1px #438ac7;
+	border-radius: 3px;
+	bottom: 26px;
+	left: 30px;
+	color: #438ac7;
+}
+
+#fan-low {
+	display: inline-block;
+	width: 60px;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	margin: auto;
+	background: #438ac7;
+	color: #fff;
+	transition: .5s;
+}
+
+#fan-med {
+	display: inline-block;
+	width: 60px;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	margin: auto;
+	border-left: solid 1px #438ac7;
+	border-right: solid 1px #438ac7;
+	transition: .5s;
+}
+
+#fan-high {
+	display: inline-block;
+	width: 60px;
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	margin: auto;
+	transition: .5s;
+}
+
 .mode-switch {
 	position: absolute;
-	top: 40px;
-	
+	top: 70px;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
+	transition: .5s;
+	fill: #efefef;
 }
 
 #mode-cool {
 	left: 40px;
 }
 
-#mode-warm {
+#mode-heat {
 	left: 120px;
 }
 

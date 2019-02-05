@@ -1,0 +1,76 @@
+#user-top-blk {
+	height: 200px;
+	width: 100%;
+}
+
+#profile-pic-blk {
+	position: relative;
+}
+
+#profile-pic-img {
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 40px auto 0px auto;
+}
+
+#profile-name {
+	display: block;
+	margin: 20px auto 0px auto;
+	font-size: 20px;
+	text-align: center;
+}
+
+.user-fill-blk {
+	height: 40px;
+}
+
+.user-blk {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	height: 40px;
+	border: solid 1px #dedede;
+	animation: fadeEffect .3s;
+	color: #454545;
+	background-color: #ffffff;
+	margin: -1px auto 0px auto;
+}
+
+.user-blk:hover {
+	background-color: #efefef;
+}
+
+.user-blk-title {
+	position: absolute;
+	top: 9px;
+	left: 20px;
+	color: #111111;
+	font-weight: normal;
+}
+
+.user-blk-arrow {
+	position: absolute;
+	right: 20px;
+	top: 9px;
+	color: #ababab;
+	font-size: 20px;
+}
+
+.logout-blk-title {
+	position: relative;
+	top: 9px;
+	width: 100%;
+	text-align: center;
+	color: #ff1111;
+	font-weight: normal;
+}
+
+@media (max-width: 500px)  {
+	.user-blk {
+		max-width: 500px;
+		border-left: none;
+		border-right: none;
+	}
+}

@@ -6,7 +6,7 @@ footer {
 	left: 0;
 	height: 60px;
 	width: 100%;
-	background-color: #efefef;
+	background-color: rgba(239, 239, 239, .9);
 	box-shadow: 0px -5px 50px rgba(0, 0, 0, 0.2);
 	z-index: 2;
 }
@@ -28,14 +28,13 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #eeeeee;
 	padding: 5px 10px 5px 10px;
 	height: 50px;
 	width: 50px;
-	fill: #337ab7;
+	fill: #438ac7;
 	font-size: 10px;
 	transition: .7s;
-	color: #337ab7;;
+	color: #438ac7;
 
 }
 

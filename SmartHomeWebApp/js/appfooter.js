@@ -1,3 +1,6 @@
+var room_list = ["Living Room", "Bathroom", "Kitchen", "Bedroom", "Garden"];
+
+
 function switchDisplay(index) {
 	var selected = document.getElementsByClassName("navi-btn-sel")[0];
 	selected.className = ("navi-btn");
@@ -11,9 +14,10 @@ function switchDisplay(index) {
 	var display_fill_bottom = document.createElement('div');
 	
 	display_fill_top.className = "display-fill";
-	display_fill_top.style.height = "30px";
+	display_fill_top.style.height = "40px";
 	display.appendChild(display_fill_top);
 
+	$(window).scrollTop(0);
 	// 1: Home
 	// 2: Control
 	// 3: Favorites
@@ -31,6 +35,14 @@ function switchDisplay(index) {
 			addDropDown();
 			showControlBlock(1);
 			showACBlock(1);
+			break;
+		case 3:
+			changeHeaderTitle("Favorites");
+			loadBtn();
+			break;
+		case 4:
+			changeHeaderTitle("User");
+			showUserUI();
 			break;
 	}
 
@@ -52,6 +64,7 @@ function allowHeaderDropDown() {
 	};
 	header = document.getElementById("header-title");
 	header.appendChild(dropdown_btn);
+
 }
 
 function addDropDown() {
@@ -63,13 +76,11 @@ function addDropDown() {
 	};
 	
 
-	room_count = 3;
-
-	for(var i=0; i<room_count; i++) {
+	for(var i=0; i<room_list.length; i++) {
 		var room = document.createElement('a');
 
 		room.className = "dropdown-element";
-		room.textContent = "Room" + i;
+		room.textContent = room_list[i];
 
 		dropdown.appendChild(room);
 	}
@@ -83,6 +94,7 @@ function toggleDropDown() {
 
 	if(dropdown.style.display == "none") {
 		dropdown.style.display = "block";
+		$(window).scrollTop(0);
 	} else {
 		dropdown.style.display = "none"
 	}
