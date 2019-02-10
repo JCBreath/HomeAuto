@@ -1,0 +1,159 @@
+.home-blk {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	border: solid 1px #efefef;
+	animation: fadeEffect .3s;
+	color: #454545;
+	background-color: #ffffff;
+	margin: 20px auto 0px auto;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Weather Block */
+#weather-blk {
+	height: 200px;
+}
+
+.blk-title {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	padding-top: 10px;
+	border-bottom: solid 1px #efefef;
+	color: #656565;
+	font-weight: normal;
+}
+
+.blk-title-text {
+	margin-left: 20px;
+}
+
+#temp-text {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    font-size: 70px;
+}
+
+#cond-img {
+	position: absolute;
+	top: 50px;
+	right: 30px;
+	height: 80px;
+	width: 80px;
+}
+
+#cond-text {
+    position: absolute;
+    width: 200px;
+    top: 140px;
+    left: 30px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+#loc-part {
+	display: flex;
+    position: absolute;
+    top: 160px;
+    right: 30px;
+    font-size: 15px;
+    font-weight: lighter;
+    align-items: center;
+}
+
+#loc-text {
+	position: relative;
+}
+
+#navi-img {
+	position: relative;
+	height: 10px;
+	width: 10px;
+	margin-right: 5px;
+}
+
+/* Consumption Block */
+
+#consumption-blk {
+	height: 200px;
+}
+
+#engy-part {
+	display: block;
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    font-weight: lighter;
+    align-content: center;
+}
+
+#engy-text {
+	font-size: 50px;
+}
+
+#engy-unit {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+#engy-accu-part {
+	display: block;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    font-weight: lighter;
+    align-content: center;
+}
+
+#engy-accu-text {
+	font-size: 50px;
+}
+
+#engy-accu-unit {
+	margin-left: 10px;
+	font-size: 20px;
+}
+
+/* Note Block */
+.note-blk {
+	display: block;
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	border: solid 1px #efefef;
+	animation: fadeEffect .3s;
+	color: #454545;
+	background-color: #ffffff;
+	margin: 20px auto 0px auto;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+	height: 200px;
+	font-weight: lighter;
+}
+
+.note-text {
+	display: block;
+    position: absolute;
+    top: 55px;
+    left: 40px;
+    font-size: 20px;
+}
+
+.note-author {
+	display: block;
+    position: absolute;
+	bottom: 20px;
+	right: 40px;
+	font-size: 20px;
+}
+
+@media (max-width: 500px)  {
+	.home-blk, .note-blk {
+		max-width: 500px;
+		border-left: none;
+		border-right: none;
+	}
+}

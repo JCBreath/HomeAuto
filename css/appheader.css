@@ -1,0 +1,19 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 40px;
+	width: 100%;
+	background-color: rgba(51, 122, 183, 0.95);
+	box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+
+#header-title {
+	display: flex;
+	color: white;
+	padding: 10px;
+	font-weight: lighter;
+	position: relative;
+	justify-content: center;
+}
