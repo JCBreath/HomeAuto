@@ -4,7 +4,24 @@ function showWeatherBlock() {
 	weather_block.className = "home-blk";
 	weather_block.id = "weather-blk";
 	display.appendChild(weather_block);
-	ReqWeatherFromYahoo("davis", "ca");
+	ReqWeatherFromServer();
+	//ReqWeatherFromYahoo("davis", "ca");
+}
+
+function ReqWeatherFromServer() {
+	let request = new XMLHttpRequest();
+	request.open("GET", "query?var=weatherinfo");
+	request.onreadystatechange = function() {
+		if (request.readyState !== 4) {
+			return;
+		}
+
+		if (request.status === 200) {
+			updateWeather(JSON.parse(request.responseText));
+		}
+	};
+	
+	request.send(null);
 }
 
 function ReqWeatherFromYahoo(city, state) {
@@ -35,11 +52,14 @@ function updateWeather(data) {
 	navi_img.id = "navi-img";
 	cond_img.id = "cond-img";
 
-	loc_text.textContent = data.query.results.channel.location.city;
-	temp_text.textContent = data.query.results.channel.item.condition.temp + "°";
-	cond_text.textContent = data.query.results.channel.item.condition.text;
+	loc_text.textContent = data.weatherinfo.cityname;
+	temp_text.textContent = data.weatherinfo.temp.substring(0, data.weatherinfo.temp.length - 1) + "°";
+	cond_text.textContent = data.weatherinfo.weather;
 	navi_img.src = "./img/navigation.svg";
-	cond_img.src = "./img/sun.svg";
+	if(data.weatherinfo.weather.indexOf("雨") != -1 || data.weatherinfo.weather.indexOf("shower") != -1)
+		cond_img.src = "./img/rain.svg";
+	else
+		cond_img.src = "./img/sun.svg";
 
 	loc_part.appendChild(navi_img);
 	loc_part.appendChild(loc_text);
@@ -58,4 +78,4 @@ var display_fill = document.createElement('div');
 	
 display_fill.id = "display-fill";
 display.appendChild(display_fill);
-*/
+*/ 
