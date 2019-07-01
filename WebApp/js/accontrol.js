@@ -123,9 +123,9 @@ function updateAC(data) {
 	fan_med.id = "fan-med";
 	fan_high.id = "fan-high";
 
-	fan_low.textContent = "LOW";
-	fan_med.textContent = "MED";
-	fan_high.textContent = "HIGH";
+	fan_low.textContent = "弱";
+	fan_med.textContent = "中";
+	fan_high.textContent = "强";
 
 	fan_low.onclick = function() {
 		ac_fan_sel(0);
@@ -143,7 +143,7 @@ function updateAC(data) {
 	fan_part.appendChild(fan_med);
 	fan_part.appendChild(fan_high);
 
-	addBlockTitle(ac_block, "AC");
+	addBlockTitle(ac_block, "空调");
 
 	ac_block.appendChild(mode_heat_part);
 	ac_block.appendChild(mode_cool_part);

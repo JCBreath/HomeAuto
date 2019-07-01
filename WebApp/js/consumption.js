@@ -64,5 +64,5 @@ function updateConsumption(data) {
 
 	consumption_block.appendChild(engy_part);
 	consumption_block.appendChild(engy_accu_part);
-	addBlockTitle(consumption_block, "Energy Usage");
+	addBlockTitle(consumption_block, "能耗");
 }

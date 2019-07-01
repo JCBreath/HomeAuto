@@ -76,7 +76,7 @@ function updateLightBlock(dev_id, blk_id) {
 
 	slider.appendChild(brtperc)
 
-	addBlockTitle(light_block, "Light");
+	addBlockTitle(light_block, "灯光");
 	light_block.appendChild(slider);
 	
 	//light_block.appendChild(info);

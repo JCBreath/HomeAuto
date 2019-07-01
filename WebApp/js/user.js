@@ -20,14 +20,14 @@ function showUserUI() {
 	profile_pic_blk.appendChild(profile_name);
 	user_top_blk.appendChild(profile_pic_blk);
 	display.appendChild(user_top_blk);
-	appendUserBlock("Change Profile", function(){});
-	appendUserBlock("Edit Family Members", function(){});
+	appendUserBlock("用户信息", function(){});
+	appendUserBlock("家庭成员", function(){});
 	appendUserFillBlock();
-	appendUserBlock("Location Sharing", function(){});
-	appendUserBlock("Security", function(){});
+	appendUserBlock("位置共享", function(){});
+	appendUserBlock("隐私安全", function(){});
 	appendUserFillBlock();
-	appendUserBlock("About", function(){});
-	appendUserBlock("Reset System", function(){});
+	appendUserBlock("关于", function(){});
+	appendUserBlock("重启系统", function(){});
 	appendUserFillBlock();
 	appendLogoutBlock();
 }
@@ -66,7 +66,7 @@ function appendLogoutBlock() {
 	user_block_title = document.createElement('div');
 	user_block_title.className = "logout-blk-title";
 
-	user_block_title.textContent = "Sign Out";
+	user_block_title.textContent = "退出登录";
 
 	user_block.appendChild(user_block_title);
 	document.getElementById('display').appendChild(user_block);

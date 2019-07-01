@@ -65,7 +65,7 @@ function updateWeather(data) {
 	loc_part.appendChild(loc_text);
 
 	
-	addBlockTitle(weather_block, "Weather");
+	addBlockTitle(weather_block, "天气");
 	weather_block.appendChild(temp_text);
 	weather_block.appendChild(cond_img);
 	weather_block.appendChild(cond_text);

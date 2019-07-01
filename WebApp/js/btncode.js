@@ -32,8 +32,21 @@ function loadBtn() {
 function addTestBtn(id, name) {
 	appendTestBtn(name, function(){
 		console.log(id);
-		if(ws_connected)
-			ws_send("BTNID=" + id);
+		// if(ws_connected)
+		// 	ws_send("BTNID=" + id);
+		var request = new XMLHttpRequest();
+		request.open("GET", "rs?btn_id=" + id);
+		request.onreadystatechange = function() {
+			if (request.readyState !== 4) {
+				return;
+			}
+	
+			if (request.status === 200) {
+				console.log("发送485成功")
+			}
+		};
+		
+		request.send(null);
 	});
 }
 

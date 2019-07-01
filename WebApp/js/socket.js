@@ -27,18 +27,18 @@ function reqSocket() {
 function socket_callback(url) {
 	ws = new WebSocket(url);
 	ws.onopen = function(evt) {
-		console.log("Websocket server connected. WebSocket 已连接。");
+		console.log("[INFO] WebSocket 已连接。Websocket server connected. ");
 		ws_connected = true;
 	};
 	 
 	ws.onmessage = function(evt) {
-		console.log("Received Message: " + evt.data);
+		console.log("[INFO] Received Message: " + evt.data);
 	};
 	 
 	ws.onclose = function(evt) {
-		console.log("Connection closed, reconnecting... 连接已断开， 尝试重连...");
+		console.log("[INFO] Connection closed, reconnecting... 连接已断开， 尝试重连...");
 		reqSocket();
 	};
 }
 
-reqSocket();
+// reqSocket();

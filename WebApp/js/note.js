@@ -46,7 +46,7 @@ function updateNote(data) {
 	navi_img.src = "./img/navigation.svg";
 	cond_img.src = "./img/sun.svg";
 	*/
-	addBlockTitle(note_block, "Note");
+	addBlockTitle(note_block, "备忘");
 	note_block.appendChild(note_text);
 	note_block.appendChild(note_author);
 }

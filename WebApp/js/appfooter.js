@@ -1,4 +1,4 @@
-var room_list = ["Living Room", "Bathroom", "Kitchen", "Bedroom", "Garden"];
+var room_list = ["总览", "二楼", "三楼", "四楼", "阳台"];
 
 
 function switchDisplay(index) {
@@ -24,24 +24,23 @@ function switchDisplay(index) {
 	// 4: User
 	switch(index) {
 		case 1:
-			changeHeaderTitle("Dashboard");
+			changeHeaderTitle("主页");
 			showWeatherBlock();
 			showConsumptionBlock();
 			showNoteBlock();
 			break;
 		case 2:
-			changeHeaderTitle("Living Room");
+			changeHeaderTitle("总览");
 			allowHeaderDropDown();
 			addDropDown();
 			showControlBlock(1);
-			showACBlock(1);
 			break;
 		case 3:
-			changeHeaderTitle("Favorites");
+			changeHeaderTitle("喜爱");
 			loadBtn();
 			break;
 		case 4:
-			changeHeaderTitle("User");
+			changeHeaderTitle("用户");
 			showUserUI();
 			break;
 	}
