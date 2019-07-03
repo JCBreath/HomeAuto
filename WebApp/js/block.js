@@ -61,6 +61,11 @@ class Block {
 
         for(var i=0; i<this.items.length; i++) {
             const _item = this.items[i];
+            if(this.type == "all") {
+                _item.name = _item.floor + "楼" + _item.room + _item.name;
+            } else if(this.type == "floor") {
+                _item.name = _item.room + _item.name;
+            }
             
             var item = new Item(this.id + "-item-" + i, _item, inner_block, "50px", "50%");
             item.Render();
