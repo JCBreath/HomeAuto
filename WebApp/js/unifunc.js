@@ -18,6 +18,5 @@ function addBlockTitle(block, str) {
 
 function changeHeaderTitle(str) {
 	var title = document.getElementById('header-title');
-
 	title.textContent = str;
 }

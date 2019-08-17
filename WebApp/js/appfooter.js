@@ -1,4 +1,4 @@
-var room_list = ["总览", "二楼", "三楼", "四楼", "阳台"];
+var room_list = ["总览", "一楼", "二楼", "三楼", "四楼"];
 
 
 function switchDisplay(index) {
@@ -80,6 +80,30 @@ function addDropDown() {
 
 		room.className = "dropdown-element";
 		room.textContent = room_list[i];
+		room.onclick = function() {
+			changeHeaderTitle(this.textContent);
+			if(this.textContent == "一楼") {
+				showControlBlock("floor", 1);
+				toggleDropDown();
+				allowHeaderDropDown();
+			} else if(this.textContent == "二楼") {
+				showControlBlock("floor", 2);
+				toggleDropDown();
+				allowHeaderDropDown();
+			} else if(this.textContent == "三楼") {
+				showControlBlock("floor", 3);
+				toggleDropDown();
+				allowHeaderDropDown();
+			} else if(this.textContent == "四楼") {
+				showControlBlock("floor", 4);
+				toggleDropDown();
+				allowHeaderDropDown();
+			} else if(this.textContent == "总览") {
+				showControlBlock();
+				toggleDropDown();
+				allowHeaderDropDown();
+			}
+		};
 
 		dropdown.appendChild(room);
 	}
@@ -98,3 +122,5 @@ function toggleDropDown() {
 		dropdown.style.display = "none"
 	}
 }
+
+

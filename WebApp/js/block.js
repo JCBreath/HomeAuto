@@ -9,10 +9,13 @@ class Block {
 
     AddTitle(parent, str) {
         var title = document.createElement('div');
+        title.className = "blk-title";
         var title_text = document.createElement('a');
 
         var style = title.style;
+        style.position = "relative";
         style.display = "flex";
+        style.height = "auto";
         style.width = "100%";
         style.maxWidth = "500px";
         style.backgroundColor = "#ffffff";
@@ -65,6 +68,8 @@ class Block {
                 _item.name = _item.floor + "楼" + _item.room + _item.name;
             } else if(this.type == "floor") {
                 _item.name = _item.room + _item.name;
+            } else if(this.type == "room") {
+                _item.name =  _item.name;
             }
             
             var item = new Item(this.id + "-item-" + i, _item, inner_block, "50px", "50%");
