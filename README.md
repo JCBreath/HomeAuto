@@ -1,5 +1,5 @@
 # Smart Home System
-#### View [Latest Demo (CHN)](http://www.jcbreath.net:8801) / [Concept Demo (ENG)](http://www.jcbreath.net/webapp) 
+#### View [In-use Demo (CHN)](http://www.jcbreath.net:8801) / [Concept Demo (ENG)](http://www.jcbreath.net/webapp) 
 #### See [Wiki](https://github.com/JCBreath/SmartHome/wiki)
 #### NPM Packages
 * express
