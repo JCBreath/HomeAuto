@@ -1,0 +1,125 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+    <title>智能家居控制中心后台 - 开关面板</title>
+    <link rel="stylesheet" href="../css/body.css">
+    <link rel="stylesheet" href="../css/appheader.css">
+	<link rel="stylesheet" href="../css/appfooter.css">
+	<link rel="stylesheet" href="../css/display.css">
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+    <header id="header">
+        <div id="header-title">开关面板</div>
+        <div id="header-add">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 491.86 491.86" style="enable-background:new 0 0 491.86 491.86;" xml:space="preserve">  
+                <path d="M465.167,211.614H280.245V26.691c0-8.424-11.439-26.69-34.316-26.69s-34.316,18.267-34.316,26.69v184.924H26.69C18.267,211.614,0,223.053,0,245.929s18.267,34.316,26.69,34.316h184.924v184.924c0,8.422,11.438,26.69,34.316,26.69s34.316-18.268,34.316-26.69V280.245H465.17c8.422,0,26.69-11.438,26.69-34.316S473.59,211.614,465.167,211.614z"/>
+            </svg>
+            <a>添加</a>
+        </div>
+    </header>
+    <div class="display">
+        <div class="display-fill" style="height: 40px;"></div>
+        <div class="row">
+            <div>开关ID</div>
+            <div>房间</div>
+            <div>开关序号</div>
+            <div>开关状态</div>
+        </div>
+        <div class="row">
+            <div>22011</div>
+            <div>2楼茶室</div>
+            <div>1</div>
+            <div>1</div>
+        </div>
+    </div>
+    <footer>
+        <div class="navi-btn-sel" id="navi-1" onclick="switchDisplay(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 59.365 59.365" style="enable-background:new 0 0 59.365 59.365;" xml:space="preserve" width="512px" height="512px">
+                <path d="M58.363,26.632l-9.681-8.989V6.365h-8v3.849L29.682,0L1.002,26.632c-0.404,0.376-0.428,1.009-0.052,1.414  c0.375,0.404,1.008,0.427,1.414,0.052l4.319-4.011v3.278v32h16V35.302c0-1.07,0.867-1.937,1.937-1.937h10.126  c1.07,0,1.937,0.867,1.937,1.937v24.063h16v-32v-3.278l4.319,4.011c0.192,0.179,0.437,0.267,0.681,0.267  c0.269,0,0.536-0.107,0.732-0.319C58.791,27.641,58.767,27.008,58.363,26.632z"/>
+            </svg>
+            <a>主页</a>
+        </div>
+    </footer>
+    <div class="overlay" id="detail-overlay">
+        <div id="detail-display">
+            <div class="detail-row">
+            <div class="detail-info">
+                <a>开关ID</a>
+                <a>22011</a>
+            </div>
+            <div class="detail-info">
+                <a>房间</a>
+                <a>2楼茶室</a>
+            </div>
+            </div>
+            <div class="detail-row">
+            <div class="detail-info">
+                <a>开关序号</a>
+                <a>1</a>
+            </div>
+            <div class="detail-info">
+                <a>开关状态</a>
+                <a>1</a>
+            </div>
+            </div>
+            <div class="detail-row">
+                <a>操作</a>
+            </div>
+            <div class="detail-row">
+                <div class="detail-action">2楼茶室灯</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-action">等待1秒</div>
+            </div>
+            <div id="detail-footer">
+                <div class="detail-btn" onclick="ShowAddDeviceOverlay();">新增设备操作</div>
+                <div class="detail-btn">新增等待操作</div>
+                <div class="detail-btn">删除</div>
+                <div class="detail-btn">保存</div>
+                <div class="detail-btn" onclick="HideDetailOverlay();">返回</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="add-overlay">
+        <div id="add-display">
+            <div class="add-row">
+                <div>楼层</div>
+                <div>房间</div>
+                <div>设备</div>
+                <div>操作</div>
+            </div>
+            <div class="add-row">
+                <div class="add-elem" id="add-floor" onclick="ToggleFloor();">
+                    <a>1</a>
+                    <div class="add-dropdown">
+
+                    </div>
+                </div>
+                <div class="add-elem" id="add-room" onclick="ToggleRoom();">
+                    <a>茶室</a>
+                    <div class="add-dropdown">
+                    </div>
+                </div>
+                <div class="add-elem" id="add-room" onclick="ToggleDevice();">
+                    <a>灯带</a>
+                    <div class="add-dropdown">
+                    </div>
+                </div>
+                <div class="add-elem" id="add-room" onclick="ToggleRS485();">
+                    <a>开</a>
+                    <div class="add-dropdown">
+                    </div>
+                </div>
+            </div>
+            <div id="add-footer">
+                <div class="add-btn" onclick="ConfirmAdd();">确认</div>
+                <div class="add-btn" onclick="HideAddOverlay();">取消</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./admin.js"></script>
+</body>
+</html>

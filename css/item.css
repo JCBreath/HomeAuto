@@ -1,0 +1,127 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    flex-direction: column;
+    transition: .5s;
+}
+
+.item-text {
+    color: #222222;
+    transition: .5s;
+}
+
+.item-text-on {
+    color: #438ac7;
+    text-shadow: 0 0 10px #a3eaf7;
+    transition: .5s;
+}
+
+.item-text-disabled {
+    color: #dddddd;
+    transition: .5s;
+}
+
+.item-indicator {
+    margin-top: 5px;
+    height: 2px;
+    width: 20px;
+    background-color: #dddddd;
+    transition: .5s;
+}
+
+.item-indicator-on {
+    margin-top: 5px;
+    height: 2px;
+    width: 40px;
+    background-color: #a3eaf7;
+    box-shadow: 0 0 10px #a3eaf7;
+    transition: .5s;
+}
+
+.item-indicator-disabled {
+    margin-top: 5px;
+    height: 2px;
+    width: 20px;
+    background-color: #eeeeee;
+    transition: .5s;
+}
+
+.DD01-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    transition: .5s;
+    width: 460px;
+    
+}
+
+.DD01-item-text {
+    flex: 1;
+    color: #222222;
+    transition: .5s;
+}
+
+.DD01-element-0 {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.DD01-element-0:hover {
+    color: #a3eaf7;
+    text-shadow: 0 0 10px #a3eaf7;
+}
+
+.DD01-element-1 {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.DD01-element-1:hover {
+    color: #a3eaf7;
+    text-shadow: 0 0 10px #a3eaf7;
+}
+
+.DD02-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    transition: .5s;
+    width: 460px;
+    
+}
+
+.DD02-item-text {
+    flex: 1;
+    color: #222222;
+    transition: .5s;
+}
+
+.DD02-element-0 {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.DD02-element-0:hover {
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.DD02-element-1 {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.DD02-element-1:hover {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}

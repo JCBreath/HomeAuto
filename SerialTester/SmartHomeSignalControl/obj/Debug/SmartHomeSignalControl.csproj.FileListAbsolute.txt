@@ -1,9 +1,0 @@
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.csprojResolveAssemblyReference.cache
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.MainForm.resources
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.Properties.Resources.resources
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.csproj.GenerateResource.Cache
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.csproj.CoreCompileInputs.cache
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\bin\Debug\SmartHomeSignalControl.exe
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\bin\Debug\SmartHomeSignalControl.pdb
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.exe
-G:\SmartHome\SmartHomeSignalControl\SmartHomeSignalControl\obj\Debug\SmartHomeSignalControl.pdb
