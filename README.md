@@ -9,7 +9,7 @@
 * mongodb
 * xlsx
 
-#### Compatibility
+#### Compatibility (currently running on RaspberryPi/Raspbian)
 * Linux x86/64/ARMv7+
 * Windows 7+
 * MacOS
