@@ -148,7 +148,6 @@ function InitData() {
 
 // LoadData(InitData);
 
-
 // Mongo (final)
 // mongo.Find("rs485", {}, function(obj) {data.rs485 = obj; });
 // mongo.Find("devices", {}, function(obj) {data.devices = obj;});
