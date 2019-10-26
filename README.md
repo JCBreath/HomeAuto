@@ -6,10 +6,10 @@
 ```sh
 node server_rpi.js [option]
 ```
-### -d Demo mode
-### -j Load json data
-### -x Load xlsx data
-### -a Enable autosave
+* **-d** Demo mode
+* **-j** Load json data
+* **-x** Load xlsx data
+* **-a** Enable autosave
 
 #### NPM Packages
 * express
