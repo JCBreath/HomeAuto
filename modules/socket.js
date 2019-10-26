@@ -20,7 +20,7 @@ function Connect(ip, port, ondata) {
 
 function Close() {
     try {
-        client.destroy();
+        client.end();
         setTimeout(Reconnect, interval);
     } catch {
         setTimeout(Reconnect, interval);
