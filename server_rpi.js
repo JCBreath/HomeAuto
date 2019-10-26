@@ -9,7 +9,12 @@ var express = require('express');
 var fs = require("fs");
 var multer = require('multer');
 
-var demo = true;
+// Commandline Parameter
+var para_list = process.argv.slice(2);
+console.log(para_list);
+var demo = false;
+var load_status = false;
+
 const device_address = "18590000";
 
 // ExpressJS
@@ -25,7 +30,8 @@ setInterval(function() {crawler.getWeatherInfo(UpdateWeather);}, 60000);
 
 // Update IP for redirection
 // DISABLED FOR DEMO
-// socket.Connect("", , function(){});
+if(!demo)
+	socket.Connect("www.jcbreath.net", 18867, function(){});
 
 // Upload XLXS
 var createFolder = function(folder){
@@ -75,25 +81,43 @@ data = {};
 // Excel (temp)
 // data.switches = xlsx.LoadSheet("SWITCH", 1, ["id", "name", "cases+"]);
 // xlsx.LoadXLSX("./upload/data.xlsx");
-fs.exists("./upload/data.xlsx", function(exists){
-	try {
-		if(exists) {
-			xlsx.LoadXLSX("./upload/data.xlsx");
-			console.log("[INFO] XLSX found at upload.");
-		}
-		else {
-			xlsx.LoadXLSX("./data.xlsx");
-			console.log("[INFO] XLSX found at root.");
-		}
-		data.rs485 = xlsx.LoadSheet("RS485", 1, ["id", "name", "code"]);
-		data.devices = xlsx.LoadSheet("DEVICE", 1, ["id", "name", "type"]);
-		data.rooms = xlsx.LoadSheet("ROOM", 1, ["id", "name", "floor"]);
-		data.switches = xlsx.LoadSwitch();
-		InitDevices();
-	} catch {
+function LoadDataXLSX() {
+	fs.exists("./upload/data.xlsx", function(exists){
+		try {
+			if(exists) {
+				xlsx.LoadXLSX("./upload/data.xlsx");
+				console.log("[INFO] XLSX found at upload.");
+			}
+			else {
+				xlsx.LoadXLSX("./data.xlsx");
+				console.log("[INFO] XLSX found at root.");
+			}
+			data.rs485 = xlsx.LoadSheet("RS485", 1, ["id", "name", "code"]);
+			data.devices = xlsx.LoadSheet("DEVICE", 1, ["id", "name", "type"]);
+			data.rooms = xlsx.LoadSheet("ROOM", 1, ["id", "name", "floor"]);
+			data.switches = xlsx.LoadSwitch();
+			InitDevices();
+		} catch {
 
+		}
+	});
+}
+
+for(var i=0; i<para_list.length; i++) {
+	if(para_list[i] == "-d") {
+		demo = true;
+		console.log("[INFO] Demo on.");
+	} else if(para_list[i] == "-a") {
+		setInterval(SaveData, 60000, "Interval");
+		console.log("[INFO] Autosave on.");
+	} else if(para_list[i] == "-j") {
+		LoadData();
+		console.log("[INFO] Load json on.");
+	} else if(para_list[i] == "-x") {
+		LoadDataXLSX();
+		console.log("[INFO] Load xlsx on.");
 	}
-});
+}
 
 
 function SaveData() {
@@ -113,10 +137,10 @@ function LoadData(callback) {
 		else {
 			data = JSON.parse(_data);
 			console.log("[INFO] Data loaded from data.json");
-			callback();
 		}
 	});
 }
+
 
 function InitData() {
 	InitDevices();
@@ -458,6 +482,8 @@ app.get('/backup.json', function(req, res) {
 // console.log(getRoomsByFloor(2));
 // console.log(getDevicesByRoom(22));
 // console.log(getRS485ByDevice(2202));
+
+
 
 // Express Server
 var server = app.listen(80, function () {

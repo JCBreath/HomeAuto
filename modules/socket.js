@@ -10,7 +10,7 @@ function Connect(ip, port, ondata) {
         console.log("[INFO] IP updated.");
         client.on('data', ondata);
         client.on('error', function() {
-            
+            console.log("[INFO] Fail to connect.");
         });
         setTimeout(Close, interval);
     } catch {
@@ -29,7 +29,7 @@ function Close() {
 
 function Reconnect() {
     try{
-        Connect("132.232.3.155", 18867, function(){});
+        Connect("www.jcbreath.net", 18867, function(){});
     } catch {
         setTimeout(Reconnect, interval);
     }
